@@ -64,7 +64,13 @@ public class automationTestingHomeService extends ActionManager {
         click(automationTestingConstants.BTN_REGISTER_XPATH);
     }
     public static void verificarRegister() {
-        Assert.assertTrue(isVisible(automationTestingConstants.BTN_LOGOUT_XPATH));
+        Assert.assertTrue(isVisible(automationTestingConstants.BTN_DASHBOARD_XPATH));
+    }
+    public static void noRegisterUsername(){
+        Assert.assertTrue(isVisible(automationTestingConstants.LI_USERNAME_INVALID_XPATH));
+    }
+    public static void noRegisterPassword(){
+        Assert.assertTrue(isVisible(automationTestingConstants.LI_PASSWORD_INVALID_XPATH));
     }
 
 

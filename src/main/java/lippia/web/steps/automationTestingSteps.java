@@ -89,7 +89,21 @@ public class automationTestingSteps extends PageSteps {
     public void elUsuarioVerificaQueSeRegistroCorrectamenteEnLaWeb() {
         automationTestingHomeService.verificarRegister();
     }
+    @Then("La web muestra un mensaje de error por username vacio")
+    public void laWebMuestraUnMensajeDeErrorPorUsernameVacio() {
+        automationTestingHomeService.noRegisterUsername();
+    }
+    @Then("La web muestra un mensaje de error por password vacia")
+    public void laWebMuestraUnMensajeDeErrorPorPasswordVacia() {
+        automationTestingHomeService.noRegisterPassword();
+    }
+    @Then("La web muestra un mensaje de error por credenciales vacias")
+    public void laWebMuestraUnMensajeDeErrorPorCredencialesVacias() {
+        automationTestingHomeService.noRegisterUsername();
+    }
 
+
+    //Account
 
     @Then("El usuario verifica que ve el Dashboard")
     public void elUsuarioVerificaQueVeElDashboard() {
@@ -160,4 +174,10 @@ public class automationTestingSteps extends PageSteps {
     public void elUsuarioVerificaQueSeDeslogueo() {
         automationTestingHomeService.verificarLogout();
     }
+
+    @Then("La web muestra un mensaje de error por username ya registrado")
+    public void laWebMuestraUnMensajeDeErrorPorUsernameYaRegistrado() {
+    }
+
+
 }
