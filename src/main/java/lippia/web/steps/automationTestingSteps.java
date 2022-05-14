@@ -68,8 +68,9 @@ public class automationTestingSteps extends PageSteps {
     }
     @Then("El usuario no deberia estar logueado en la pagina")
     public void elUsuarioNoDeberiaEstarLogueadoEnLaPagina() {
-        automationTestingHomeService.verificarLogueo();
+        automationTestingHomeService.verificarLogin();
     }
+
 
     //Register
     @And("^El usuario ingresa un username \"(.*)\"$")

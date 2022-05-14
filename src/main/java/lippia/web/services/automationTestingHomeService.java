@@ -48,7 +48,7 @@ public class automationTestingHomeService extends ActionManager {
         click(automationTestingConstants.BTN_LOGOUT_XPATH);
     }
     public static void verificarLogueo() {
-        Assert.assertFalse(isVisible(automationTestingConstants.BTN_LOGOUT_XPATH));
+        Assert.assertTrue(isVisible(automationTestingConstants.BTN_LOGIN_XPATH ));
     }
 
 
