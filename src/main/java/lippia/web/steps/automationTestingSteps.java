@@ -59,7 +59,7 @@ public class automationTestingSteps extends PageSteps {
     }
     @And("^El usuario clickea en el boton de \"(.*)\"$")
     public void elUsuarioClickeaEnElBotonDeLogout(String boton_logout) {
-        automationTestingHomeService.clickLogout();
+        automationTestingHomeService.clickLogout(boton_logout);
     }
     //No se como identificar el boton de retorno, utilice un camino secundario
     @And("^El usuario apreta el boton de \"(.*)\"$")
@@ -91,5 +91,73 @@ public class automationTestingSteps extends PageSteps {
     }
 
 
+    @Then("El usuario verifica que ve el Dashboard")
+    public void elUsuarioVerificaQueVeElDashboard() {
+        automationTestingHomeService.verificarDashboard();
+    }
 
+    @And("^El usuario clickea el boton \"(.*)\" para ir a las ordenes de compra$")
+    public void elUsuarioClickeaElBotonParaIrALasOrdenesDeCompra(String boton_orders) {
+        automationTestingHomeService.clickOrders(boton_orders);
+    }
+
+    @Then("El usuario ve la pagina con las ordenes de compra")
+    public void elUsuarioVeLaPaginaConLasOrdenesDeCompra() {
+        automationTestingHomeService.verificarOrdenes();
+    }
+
+    @And("^El usuario clickea en el boton \"(.*)\" para ver su orden de compra$")
+    public void elUsuarioClickeaEnElBotonParaVerSuOrdenDeCompra(String boton_orders_view) {
+        automationTestingHomeService.clickOrdersView(boton_orders_view);
+    }
+
+    @Then("El usuario visualiza los detalles de su orden")
+    public void elUsuarioVisualizaLosDetallesDeSuOrden() {
+        automationTestingHomeService.verificarOrdersDetails();
+    }
+
+    @Then("El usuario visualiza el numero de orden y su status")
+    public void elUsuarioVisualizaElNumeroDeOrdenYSuStatus() {
+        automationTestingHomeService.verificarNumeroYFechaOrders();
+    }
+
+    @And("^El usuario clickea el boton \"(.*)\" para ver su direccion$")
+    public void elUsuarioClickeaElBotonParaVerSuDireccion(String boton_address) {
+        automationTestingHomeService.clickAddress(boton_address);
+    }
+
+    @Then("El usuario verifica que ve el billing and ship address")
+    public void elUsuarioVerificaQueVeElBillingAndShipAddress() {
+        automationTestingHomeService.verificarBillingShipping();
+    }
+
+    @And("^El usuario clickea el boton \"(.*)\" en Shipping Address$")
+    public void elUsuarioClickeaElBotonEnShippingAddress(String boton_shipping) {
+        automationTestingHomeService.clickShipping(boton_shipping);
+    }
+
+    @Then("El usuario puede editar su Shipping Address")
+    public void elUsuarioPuedeEditarSuShippingAddress() {
+        automationTestingHomeService.verificarShippingEdit();
+    }
+
+    @And("^El usuario clickea el boton \"(.*)\" para ver detalle de su cuenta$")
+    public void elUsuarioClickeaElBotonParaVerDetalleDeSuCuenta(String boton_account_details) {
+        automationTestingHomeService.clickAccountDetails(boton_account_details);
+    }
+
+    @Then("El usuario visualiza que puede cambiar su password")
+    public void elUsuarioVisualizaQuePuedeCambiarSuPassword() {
+        automationTestingHomeService.verificarAccountDetailsEditPassword();
+    }
+
+    @And("^El usuario clickea el boton \"(.*)\" para desloguarse$")
+    public void elUsuarioClickeaElBotonParaDesloguearse(String boton_logout) {
+        automationTestingHomeService.clickLogout(boton_logout);
+    }
+
+    @Then("El usuario verifica que se deslogueo")
+    public void elUsuarioVerificaQueSeDeslogueo() {
+        automationTestingHomeService.verificarLogout();
+    }
 }
