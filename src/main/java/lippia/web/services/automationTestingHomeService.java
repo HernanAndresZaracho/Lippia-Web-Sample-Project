@@ -29,9 +29,28 @@ public class automationTestingHomeService extends ActionManager {
     public static void verificarLogin() {
         Assert.assertTrue(isVisible(automationTestingConstants.BTN_LOGOUT_XPATH));
     }
-    public static void verificarNoLogin() {
-        Assert.assertTrue(isVisible(automationTestingConstants.STRONG_ERROR_XPATH));
+    public static void noLoginUsername404() {
+        Assert.assertTrue(isVisible(automationTestingConstants.LI_USERNAME404_XPATH));
     }
+    public static void noLoginPassword412() {
+        Assert.assertTrue(isVisible(automationTestingConstants.LI_PASSWORD412_XPATH));
+    }
+    public static void noLoginUsername412() {
+        Assert.assertTrue(isVisible(automationTestingConstants.LI_USERNAME412_XPATH));
+    }
+    public static void noLoginPassword409() {
+        Assert.assertTrue(isVisible(automationTestingConstants.LI_PASSWORD409_XPATH));
+    }
+    public static void checkPasswordSecurity() {
+        Assert.assertTrue(isVisible(automationTestingConstants.INPUT_PASSWORD_SECURITY_XPATH));
+    }
+    public static void clickLogout(){
+        click(automationTestingConstants.BTN_LOGOUT_XPATH);
+    }
+    public static void verificarLogueo() {
+        Assert.assertFalse(isVisible(automationTestingConstants.BTN_LOGOUT_XPATH));
+    }
+
 
     //Register
     public static void inputNewUsername(String text) {
