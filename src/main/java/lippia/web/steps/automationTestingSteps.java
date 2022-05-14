@@ -126,8 +126,8 @@ public class automationTestingSteps extends PageSteps {
         automationTestingHomeService.clickAddress(boton_address);
     }
 
-    @Then("El usuario verifica que ve el billing and ship address")
-    public void elUsuarioVerificaQueVeElBillingAndShipAddress() {
+    @Then("El usuario visualiza el billing and shipping address")
+    public void elUsuarioVisualizaElBillingAndShippingAddress() {
         automationTestingHomeService.verificarBillingShipping();
     }
 

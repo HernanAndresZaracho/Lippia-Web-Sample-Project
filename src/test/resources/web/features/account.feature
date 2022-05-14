@@ -1,6 +1,6 @@
 Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
 
-  @Test
+  @TestAcc
   Scenario: El usuario visualiza el Dashboard
     Given El usuario se encuentra en la pagina de Automation Practice
     When El usuario clickea el boton "My Account" del menu
@@ -57,9 +57,9 @@ Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
     And El usuario verifica que ingreso correctamente a la web
     And El usuario clickea el boton "My Account" del menu
     And El usuario clickea el boton "Address" para ver su direccion
-    Then El usuario verifica que ve el billing and ship address
+    Then El usuario visualiza el billing and shipping address
 
-  @Test
+  @TestAcc
   Scenario: El usuario verifica que puede editar el shipping address
     Given El usuario se encuentra en la pagina de Automation Practice
     When El usuario clickea el boton "My Account" del menu
