@@ -53,7 +53,7 @@ Feature: Test de pruebas sobre el logueo de la pagina (MY ACCOUNT - LOGIN)
     And El usuario ingresa un password random "1234Hernanat"
     Then La web muestra asteriscos en el textbox password
 
-  @Test
+  @TestLoginFalla
   Scenario: El usuario intenta loguearse con el username y password invertido en mayusculas y minisculas
     Given El usuario se encuentra en la pagina de Automation Practice
     When El usuario clickea el boton "My Account" del menu
@@ -62,7 +62,7 @@ Feature: Test de pruebas sobre el logueo de la pagina (MY ACCOUNT - LOGIN)
     And El usuario clickea en el boton "Login"
     Then La web muestra un mensaje de contrasena incorrecta
 
-  @Test
+  @TestLoginFalla
   Scenario: El usuario se loguea, se desloguea, vuelve a la instancia anterior y verifica si esta logueado
     Given El usuario se encuentra en la pagina de Automation Practice
     When El usuario clickea el boton "My Account" del menu
