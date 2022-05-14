@@ -72,7 +72,7 @@ Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
     And El usuario clickea el boton "Edit" en Shipping Address
     Then El usuario puede editar su Shipping Address
 
-  @Test
+  @TestAcc
   Scenario: El usuario verifica que puede cambiar su password
     Given El usuario se encuentra en la pagina de Automation Practice
     When El usuario clickea el boton "My Account" del menu
@@ -84,7 +84,7 @@ Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
     And El usuario clickea el boton "Account Details" para ver detalle de su cuenta
     Then El usuario visualiza que puede cambiar su password
 
-  @Test
+  @TestAcc
   Scenario: El usuario se desloguea de la cuenta
     Given El usuario se encuentra en la pagina de Automation Practice
     When El usuario clickea el boton "My Account" del menu
