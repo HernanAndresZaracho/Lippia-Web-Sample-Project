@@ -72,6 +72,7 @@ public class automationTestingSteps extends PageSteps {
     }
 
 
+
     //Register
     @And("^El usuario ingresa un username \"(.*)\"$")
     public void elUsuarioIngresaUnUsername(String username) {
@@ -89,95 +90,87 @@ public class automationTestingSteps extends PageSteps {
     public void elUsuarioVerificaQueSeRegistroCorrectamenteEnLaWeb() {
         automationTestingHomeService.verificarRegister();
     }
-    @Then("La web muestra un mensaje de error por username vacio")
-    public void laWebMuestraUnMensajeDeErrorPorUsernameVacio() {
+    @Then("La web muestra un mensaje de error por username ya registrado")
+    public void laWebMuestraUnMensajeDeErrorPorUsernameYaRegistrado() {
+        automationTestingHomeService.noRegisterUsernameOccupied();
+    }
+    @Then("La web muestra un mensaje de error por mail vacio")
+    public void laWebMuestraUnMensajeDeErrorPorMailVacio() {
         automationTestingHomeService.noRegisterUsername();
     }
     @Then("La web muestra un mensaje de error por password vacia")
     public void laWebMuestraUnMensajeDeErrorPorPasswordVacia() {
         automationTestingHomeService.noRegisterPassword();
     }
-    @Then("La web muestra un mensaje de error por credenciales vacias")
-    public void laWebMuestraUnMensajeDeErrorPorCredencialesVacias() {
-        automationTestingHomeService.noRegisterUsername();
+    @Then("La web no permite clickear en el boton Register al no ingresarse ningun password")
+    public void laWebNoPermiteClickearEnElBotonRegisterAlNoIngresarseNingunPassword() {
+        //no permite clickear en el boton registrar
+        //si se ingresa manualmente muestra un mensaje para...
+        //la password vacia
+        //las credenciales vacias
+        //pero al ser automatizado no permite clickear el boton Register
     }
 
 
-    //Account
 
+    //Account
     @Then("El usuario verifica que ve el Dashboard")
     public void elUsuarioVerificaQueVeElDashboard() {
         automationTestingHomeService.verificarDashboard();
     }
-
     @And("^El usuario clickea el boton \"(.*)\" para ir a las ordenes de compra$")
     public void elUsuarioClickeaElBotonParaIrALasOrdenesDeCompra(String boton_orders) {
         automationTestingHomeService.clickOrders(boton_orders);
     }
-
     @Then("El usuario ve la pagina con las ordenes de compra")
     public void elUsuarioVeLaPaginaConLasOrdenesDeCompra() {
         automationTestingHomeService.verificarOrdenes();
     }
-
     @And("^El usuario clickea en el boton \"(.*)\" para ver su orden de compra$")
     public void elUsuarioClickeaEnElBotonParaVerSuOrdenDeCompra(String boton_orders_view) {
         automationTestingHomeService.clickOrdersView(boton_orders_view);
     }
-
     @Then("El usuario visualiza los detalles de su orden")
     public void elUsuarioVisualizaLosDetallesDeSuOrden() {
         automationTestingHomeService.verificarOrdersDetails();
     }
-
     @Then("El usuario visualiza el numero de orden y su status")
     public void elUsuarioVisualizaElNumeroDeOrdenYSuStatus() {
         automationTestingHomeService.verificarNumeroYFechaOrders();
     }
-
     @And("^El usuario clickea el boton \"(.*)\" para ver su direccion$")
     public void elUsuarioClickeaElBotonParaVerSuDireccion(String boton_address) {
         automationTestingHomeService.clickAddress(boton_address);
     }
-
     @Then("El usuario visualiza el billing and shipping address")
     public void elUsuarioVisualizaElBillingAndShippingAddress() {
         automationTestingHomeService.verificarBillingShipping();
     }
-
     @And("^El usuario clickea el boton \"(.*)\" en Shipping Address$")
     public void elUsuarioClickeaElBotonEnShippingAddress(String boton_shipping) {
         automationTestingHomeService.clickShipping(boton_shipping);
     }
-
     @Then("El usuario puede editar su Shipping Address")
     public void elUsuarioPuedeEditarSuShippingAddress() {
         automationTestingHomeService.verificarShippingEdit();
     }
-
     @And("^El usuario clickea el boton \"(.*)\" para ver detalle de su cuenta$")
     public void elUsuarioClickeaElBotonParaVerDetalleDeSuCuenta(String boton_account_details) {
         automationTestingHomeService.clickAccountDetails(boton_account_details);
     }
-
     @Then("El usuario visualiza que puede cambiar su password")
     public void elUsuarioVisualizaQuePuedeCambiarSuPassword() {
         automationTestingHomeService.verificarAccountDetailsEditPassword();
     }
-
     @And("^El usuario clickea el boton \"(.*)\" para desloguarse$")
     public void elUsuarioClickeaElBotonParaDesloguearse(String boton_logout) {
         automationTestingHomeService.clickLogout(boton_logout);
     }
-
     @Then("El usuario verifica que se deslogueo")
     public void elUsuarioVerificaQueSeDeslogueo() {
         automationTestingHomeService.verificarLogout();
     }
 
-    @Then("La web muestra un mensaje de error por username ya registrado")
-    public void laWebMuestraUnMensajeDeErrorPorUsernameYaRegistrado() {
-    }
 
 
 }
