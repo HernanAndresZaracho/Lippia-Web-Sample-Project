@@ -28,7 +28,7 @@ public class automationTestingHomeService extends ActionManager {
         click(automationTestingConstants.BTN_LOGIN_XPATH);
     }
     public static void verificarLogin() {
-        Assert.assertTrue(isVisible(automationTestingConstants.BTN_LOGOUT_XPATH));
+        Assert.assertTrue(isVisible(automationTestingConstants.BTN_LOGIN_XPATH));
     }
     public static void noLoginUsername404() {
         Assert.assertTrue(isVisible(automationTestingConstants.LI_USERNAME404_XPATH));

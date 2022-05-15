@@ -62,10 +62,10 @@ public class automationTestingSteps extends PageSteps {
         automationTestingHomeService.clickLogout(boton_logout);
     }
     //No se como identificar el boton de retorno, utilice un camino secundario
-    @And("^El usuario apreta el boton de \"(.*)\"$")
-    public void elUsuarioApretaElBotonDeRetorno(String boton_retorno) {
-        automationTestingHomeService.clickMyAccount(boton_retorno);
-    }
+    //@And("^El usuario apreta el boton de \"(.*)\"$")
+    //public void elUsuarioApretaElBotonDeRetorno(String boton_retorno) {
+        //automationTestingHomeService.clickMyAccount(boton_retorno);
+    //}
     @Then("El usuario no deberia estar logueado en la pagina")
     public void elUsuarioNoDeberiaEstarLogueadoEnLaPagina() {
         automationTestingHomeService.verificarLogin();
