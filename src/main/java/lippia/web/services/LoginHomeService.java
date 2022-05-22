@@ -25,7 +25,7 @@ public class LoginHomeService extends ActionManager{
         click(LoginConstants.BTN_LOGIN_XPATH);
     }
     public static void verificarLogin() {
-        Assert.assertTrue(isVisible(LoginConstants.BTN_LOGIN_XPATH));
+        Assert.assertTrue(isVisible(LoginConstants.BTN_LOGOUT_XPATH));
     }
     public static void noLoginUsername404() {
         Assert.assertTrue(isVisible(LoginConstants.LI_USERNAME404_XPATH));

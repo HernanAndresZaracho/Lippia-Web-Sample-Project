@@ -1,6 +1,6 @@
 Feature: Test de pruebas sobre el logueo de la pagina (MY ACCOUNT - LOGIN)
 
-  @TestLogin
+  @Test
   Scenario: El usuario se loguea correctamente con credenciales validas
     Given El usuario se encuentra en la pagina de Automation Practice
     When El usuario clickea el boton "My Account" del menu
