@@ -35,6 +35,8 @@
 
 		<!-- client project custom properties -->
 		<web-app.url>http://practice.automationtesting.in/</web-app.url>
+		<mail>HernanCrowdAr22@test.com</mail>
+		<password>1705962013Hernanat</password>
 
 	</properties>
 	<profiles>
