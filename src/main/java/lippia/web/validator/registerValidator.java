@@ -12,16 +12,16 @@ public class registerValidator {
     static SoftAssert softAssert = new SoftAssert();
 
     public static void verificarRegister() {
-        Assert.assertTrue(isVisible(AccountConstants.BTN_DASHBOARD_XPATH));
+        softAssert.assertTrue(isVisible(AccountConstants.BTN_DASHBOARD_XPATH));
     }
     public static void noRegisterUsernameOccupied(){
-        Assert.assertTrue(isVisible(RegisterConstants.LI_USERNAME_OCUPPIED_XPATH));
+        softAssert.assertTrue(isVisible(RegisterConstants.LI_USERNAME_OCUPPIED_XPATH));
     }
     public static void noRegisterUsername(){
-        Assert.assertTrue(isVisible(RegisterConstants.LI_USERNAME_INVALID_XPATH));
+        softAssert.assertTrue(isVisible(RegisterConstants.LI_USERNAME_INVALID_XPATH));
     }
     public static void noRegisterPassword(){
-        Assert.assertTrue(isVisible(RegisterConstants.LI_PASSWORD_INVALID_XPATH));
+        softAssert.assertTrue(isVisible(RegisterConstants.LI_PASSWORD_INVALID_XPATH));
     }
 
 }

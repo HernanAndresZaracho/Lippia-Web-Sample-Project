@@ -1,14 +1,9 @@
 package lippia.web.services;
 
-import com.crowdar.core.PropertyManager;
 import com.crowdar.core.actions.ActionManager;
 import lippia.web.constants.AccountConstants;
-import lippia.web.constants.LoginConstants;
-import org.testng.Assert;
 
-import static com.crowdar.core.actions.WebActionManager.navigateTo;
-
-public class AccountHomeService extends ActionManager{
+public class AccountService extends ActionManager{
 
     public static void clickOrders(){
         click(AccountConstants.BTN_ORDERS_XPATH);

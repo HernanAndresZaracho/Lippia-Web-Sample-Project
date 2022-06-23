@@ -3,8 +3,8 @@ package lippia.web.steps;
 import com.crowdar.core.PageSteps;
 import com.crowdar.core.PropertyManager;
 import io.cucumber.java.en.*;
-import lippia.web.services.AccountHomeService;
-import lippia.web.services.LoginHomeService;
+import lippia.web.services.AccountService;
+import lippia.web.services.LoginService;
 import lippia.web.validator.accountValidator;
 
 public class AccountSteps extends PageSteps{
@@ -14,7 +14,7 @@ public class AccountSteps extends PageSteps{
     }
     @And("^El usuario clickea el boton Orders para ir a las ordenes de compra$")
     public void elUsuarioClickeaElBotonParaIrALasOrdenesDeCompra() {
-        AccountHomeService.clickOrders();
+        AccountService.clickOrders();
     }
     @Then("El usuario ve la pagina con las ordenes de compra")
     public void elUsuarioVeLaPaginaConLasOrdenesDeCompra() {
@@ -22,7 +22,7 @@ public class AccountSteps extends PageSteps{
     }
     @And("^El usuario clickea en el boton View para ver su orden de compra$")
     public void elUsuarioClickeaEnElBotonParaVerSuOrdenDeCompra() {
-        AccountHomeService.clickOrdersView();
+        AccountService.clickOrdersView();
     }
     @Then("El usuario visualiza los detalles de su orden")
     public void elUsuarioVisualizaLosDetallesDeSuOrden() {
@@ -34,7 +34,7 @@ public class AccountSteps extends PageSteps{
     }
     @And("^El usuario clickea el boton Address para ver su direccion$")
     public void elUsuarioClickeaElBotonParaVerSuDireccion() {
-        AccountHomeService.clickAddress();
+        AccountService.clickAddress();
     }
     @Then("El usuario visualiza el billing and shipping address")
     public void elUsuarioVisualizaElBillingAndShippingAddress() {
@@ -42,7 +42,7 @@ public class AccountSteps extends PageSteps{
     }
     @And("^El usuario clickea el boton Edit en Shipping Address$")
     public void elUsuarioClickeaElBotonEnShippingAddress() {
-        AccountHomeService.clickShipping();
+        AccountService.clickShipping();
     }
     @Then("El usuario puede editar su Shipping Address")
     public void elUsuarioPuedeEditarSuShippingAddress() {
@@ -50,7 +50,7 @@ public class AccountSteps extends PageSteps{
     }
     @And("^El usuario clickea el boton Account Details para ver detalle de su cuenta$")
     public void elUsuarioClickeaElBotonParaVerDetalleDeSuCuenta() {
-        AccountHomeService.clickAccountDetails();
+        AccountService.clickAccountDetails();
     }
     @Then("El usuario visualiza que puede cambiar su password")
     public void elUsuarioVisualizaQuePuedeCambiarSuPassword() {
@@ -58,7 +58,7 @@ public class AccountSteps extends PageSteps{
     }
     @And("^El usuario clickea el boton Logout$")
     public void elUsuarioClickeaElBotonParaDesloguearse() {
-        LoginHomeService.clickLogout();
+        LoginService.clickLogout();
     }
     @Then("El usuario verifica que se deslogueo")
     public void elUsuarioVerificaQueSeDeslogueo() {
@@ -67,6 +67,6 @@ public class AccountSteps extends PageSteps{
 
     @Given("El usuario se encuentra logueado")
     public void elUsuarioSeEncuetraLogueado() {
-        LoginHomeService.doLogin(PropertyManager.getProperty("mail"), PropertyManager.getProperty("password"));
+        LoginService.doLogin(PropertyManager.getProperty("mail"), PropertyManager.getProperty("password"));
     }
 }

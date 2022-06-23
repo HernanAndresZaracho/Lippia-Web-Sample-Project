@@ -2,29 +2,29 @@ package lippia.web.steps;
 
 import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.*;
-import lippia.web.services.LoginHomeService;
+import lippia.web.services.LoginService;
 import lippia.web.validator.loginValidator;
 
 public class LoginSteps extends PageSteps{
     @Given("El usuario se encuentra en la pagina de Automation Practice")
     public void elUsuarioSeEncuentraEnLaPaginaDeAutomationPractice() {
-        LoginHomeService.navegarWeb();
+        LoginService.navegarWeb();
     }
     @When("^El usuario clickea el boton My Account del menu$")
     public void elUsuarioClickeaElBotonMyAccount() {
-        LoginHomeService.clickMyAccount();
+        LoginService.clickMyAccount();
     }
     @And("^El usuario ingresa su username (.*)$")
     public void elUsuarioIngresaSuUsername(String username) {
-        LoginHomeService.inputUsername(username);
+        LoginService.inputUsername(username);
     }
     @And("^El usuario ingresa su password (.*)$")
     public void elUsuarioIngresaSuPassword(String password) {
-        LoginHomeService.inputPassword(password);
+        LoginService.inputPassword(password);
     }
     @And("^El usuario clickea en el boton Login$")
     public void elUsuarioClickeaEnElBotonLogin() {
-        LoginHomeService.clickLogin();
+        LoginService.clickLogin();
     }
     @Then("El usuario verifica que ingreso correctamente a la web")
     public void elUsuarioVerificaQueIngresoCorrectamenteALaWeb() {
@@ -44,7 +44,7 @@ public class LoginSteps extends PageSteps{
     }
     @And("^El usuario ingresa un password random \"(.*)\"$")
     public void elUsuarioIngresaUnPasswordRandom(String password) {
-        LoginHomeService.inputPassword(password);
+        LoginService.inputPassword(password);
     }
     @Then("La web muestra asteriscos en el textbox password")
     public void laWebMuestraAsteriscosEnElTextboxPassword() {
@@ -56,7 +56,7 @@ public class LoginSteps extends PageSteps{
     }
     @And("^El usuario clickea en el boton Logout$")
     public void elUsuarioClickeaEnElBotonDeLogout() {
-        LoginHomeService.clickLogout();
+        LoginService.clickLogout();
     }
     @Then("El usuario no deberia estar logueado en la pagina")
     public void elUsuarioNoDeberiaEstarLogueadoEnLaPagina() {
