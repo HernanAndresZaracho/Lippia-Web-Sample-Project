@@ -13,8 +13,8 @@ public class ShopSteps extends PageSteps{
     public void elUsuarioAgregaUnLibroAlCarrito() {
         ShopService.clickAddHTMLForms();
     }
-    @Then("El usuario comprueba que varia los impuestos para la (.*)")
-    public void elUsuarioCompruebaQueVariaLosImpuestosParaLaIndia(String pais) {
+    @Then("El usuario selecciona el (.*)")
+    public void elUsuarioSeleccionaElPais(String pais) {
         HomeService.inputBillingCountry(pais);
     }
 

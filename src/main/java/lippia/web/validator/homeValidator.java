@@ -60,4 +60,13 @@ public class homeValidator {
         softAssert.assertTrue((isVisible(HomeConstants.MSG_BILLING_XPATH)));
         softAssert.assertTrue((isVisible(HomeConstants.MSG_CUSTOMER_XPATH)));
     }
+    public static boolean checkStock(){
+        boolean flag = true;
+        if(isVisible(HomeConstants.MSG_OUT_STOCK_XPATH) == flag){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

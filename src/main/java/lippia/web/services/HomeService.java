@@ -2,7 +2,11 @@ package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
 import lippia.web.constants.HomeConstants;
+import lippia.web.constants.ShopConstants;
+import lippia.web.validator.homeValidator;
 import org.testng.Assert;
+
+import java.util.Objects;
 
 public class HomeService extends ActionManager{
 
@@ -24,7 +28,13 @@ public class HomeService extends ActionManager{
 
 
     public static void clickAddBasket(){
-        click(HomeConstants.BTN_ADD_BASKET_XPATH);
+        if(homeValidator.checkStock()){
+            Assert.assertTrue(isVisible(HomeConstants.BTN_ADD_BASKET_ARRIVAL_XPATH),"El libro se encuentra fuera de stock");
+        }
+        else{
+            click(HomeConstants.BTN_ADD_BASKET_XPATH);
+        }
+
     }
     public static void clickViewBasket(){
         click(HomeConstants.BTN_VIEW_BASKET_XPATH);
@@ -50,8 +60,7 @@ public class HomeService extends ActionManager{
         inputBillingAddress("Avenida siempre viva");
         inputBillingCity("Capital");
         inputBillingPostal("3400");
-        //inputBillingCountry("Argentina");
-        //inputBillingState("Corrientes");
+        inputBillingCountry("Argentina");
     }
 
 
@@ -78,10 +87,24 @@ public class HomeService extends ActionManager{
         setInput(HomeConstants.INPUT_BILLING_POSTAL_XPATH, text,true);
     }
     public static void inputBillingCountry(String text) {
-        setInput(HomeConstants.INPUT_BILLING_COUNTRY_XPATH, text,true);
+        if(Objects.equals(text, "India")){
+            click("id:select2-chosen-1");
+            setInput("id:s2id_autogen1_search",text);
+            click("xpath:(//div[contains(@id,'select2-result-label')])[2]");
+            //click(ShopConstants.BTN_SELECTED_COUNTRY_XPATH);
+            //setInput(ShopConstants.SELECT_COUNTRY_TEXTBOX_XPATH,text);
+            //click(ShopConstants.BTN_SELECT_XPATH);
+        }
+        else{
+            click("id:select2-chosen-1");
+            setInput("id:s2id_autogen1_search",text);
+            click(ShopConstants.BTN_SELECT_XPATH);
+        }
     }
     public static void inputBillingState(String text) {
-        setInput(HomeConstants.INPUT_BILLING_STATE_XPATH, text,true);
+        click(ShopConstants.BTN_SELECTED_STATE_XPATH);
+        setInput(ShopConstants.SELECT_STATE_TEXTBOX_XPATH,text);
+        click(ShopConstants.BTN_SELECT_XPATH);
     }
 
 }

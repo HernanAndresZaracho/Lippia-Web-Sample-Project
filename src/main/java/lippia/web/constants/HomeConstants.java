@@ -11,7 +11,7 @@ public class HomeConstants {
     public static final String BTN_HTML_FORMS_XPATH = "xpath://img[@title='Mastering HTML5 Forms']";
     public static final String BTN_VIEW_BASKET_XPATH = "xpath://a[text()='View Basket']";
     public static final String BTN_ADD_BASKET_XPATH = "xpath://button[text()='Add to basket']";
-    public static final String BTN_VIEW_BASKET_ADDED_XPATH = "xpath://div/a[@href='http://practice.automationtesting.in/basket/']";
+    public static final String BTN_ADD_BASKET_ARRIVAL_XPATH = "xpath://div[@class='summary entry-summary']/a[text()='Add to basket']";
     public static final String BTN_CHECKOUT_XPATH = "xpath://a[@class='checkout-button button alt wc-forward']";
     public static final String BTN_CHECKOUT_BANK_XPATH = "xpath://li[@class='wc_payment_method payment_method_bacs']";
     public static final String BTN_PLACE_ORDER_XPATH = "xpath://input[@class='button alt']";
@@ -38,7 +38,7 @@ public class HomeConstants {
     public static final String MSG_BANK_XPATH = "xpath://h2[text()='Our Bank Details']";
     public static final String MSG_CUSTOMER_XPATH = "xpath://h2[text()='Customer Details']";
     public static final String MSG_BILLING_XPATH = "xpath://h3[text()='Billing Address']";
-
+    public static final String MSG_OUT_STOCK_XPATH = "xpath://p[@class='stock out-of-stock']";
     //INPUT
     public static final String INPUT_BILLING_NAME_XPATH = "xpath://input[@id='billing_first_name']";
     public static final String INPUT_BILLING_LASTNAME_XPATH = "xpath://input[@id='billing_last_name']";

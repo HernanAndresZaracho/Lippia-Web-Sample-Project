@@ -7,8 +7,7 @@ Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
     And El usuario verifica que ingreso correctamente a la web
 
 
-  @ProyectoFinal
-  @Home
+  @ProyectoFinal @Home @Cupon
   Scenario: El usuario puede agregar un cupon de descuento a la compra
     When El usuario clickea el boton Shop del menu
     And El usuario clickea el boton home
@@ -16,7 +15,6 @@ Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
     Then Verifica que exiten 3 libros
     When El usuario clickea en cualquier arrival
     Then Verifica que navego a la pagina del arrival seleccionado
-    When El usuario clickea en un libro a su eleccion
     And El usuario agrega el libro al carrito
     Then Verifica que su libro se agrego al carrito
     And El usuario visualiza el precio en el carrito del menu
@@ -25,12 +23,11 @@ Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
     And El valor total es mayor al subtotal
     When El usuario clickea el boton de Continuar Pago
     Then El usuario visualiza los detalles de su orden de compra
-    #And El usuario completa sus datos
+    And El usuario completa sus datos
     And El usuario puede agregar un cupon de descuento
 
 
-  @ProyectoFinal
-  @Home
+  @ProyectoFinal @Home @CompraExitosa
   Scenario: El usuario realiza una compra exitosa
     When El usuario clickea el boton Shop del menu
     And El usuario clickea el boton home
@@ -38,7 +35,6 @@ Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
     Then Verifica que exiten 3 libros
     When El usuario clickea en cualquier arrival
     Then Verifica que navego a la pagina del arrival seleccionado
-    When El usuario clickea en un libro a su eleccion
     And El usuario agrega el libro al carrito
     Then Verifica que su libro se agrego al carrito
     And El usuario visualiza el precio en el carrito del menu
@@ -47,7 +43,7 @@ Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
     And El valor total es mayor al subtotal
     When El usuario clickea el boton de Continuar Pago
     Then El usuario visualiza los detalles de su orden de compra
-    #And El usuario completa sus datos
+    And El usuario completa sus datos
     And El usuario puede agregar un cupon de descuento
     And El usuario clickea en el boton de Pago
     And El usuario clickea en el boton Realizar Pedido

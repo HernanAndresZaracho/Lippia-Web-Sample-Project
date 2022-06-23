@@ -7,7 +7,7 @@ Feature: Test de Compra y verificacion de diferencia de impuestos por pais
     And El usuario verifica que ingreso correctamente a la web
     And El usuario clickea el boton Shop del menu
 
-  @ProyectoFinal @Shop1
+  @ProyectoFinal @Shop @CompraExitosa
   Scenario: El usuario realiza una compra desde el shop
     When El usuario agrega un libro al carrito
     And El usuario visualiza el precio en el carrito del menu
@@ -16,12 +16,12 @@ Feature: Test de Compra y verificacion de diferencia de impuestos por pais
     And El valor total es mayor al subtotal
     When El usuario clickea el boton de Continuar Pago
     Then El usuario visualiza los detalles de su orden de compra
-    #And El usuario completa sus datos
+    And El usuario completa sus datos
     And El usuario clickea en el boton de Pago
     And El usuario clickea en el boton Realizar Pedido
     And El pedido se completa
 
-  @ProyectoFinal @Shop
+  @ProyectoFinal @Shop @VerificaImpuestoIndia
   Scenario Outline: El usuario verifica que el impuesto de la India es menor al resto
     When El usuario agrega un libro al carrito
     And El usuario visualiza el precio en el carrito del menu
@@ -29,7 +29,7 @@ Feature: Test de Compra y verificacion de diferencia de impuestos por pais
     Then El usuario visualiza valores totales y subtotales
     And El valor total es mayor al subtotal
     When El usuario clickea el boton de Continuar Pago
-    Then El usuario comprueba que varia los impuestos para la <Pais>
+    Then El usuario selecciona el <Pais>
     And Los impuestos para la <Pais> son 2% para los demas 5%
 
     Examples:
