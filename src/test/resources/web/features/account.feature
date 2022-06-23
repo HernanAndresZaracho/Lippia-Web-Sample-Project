@@ -6,16 +6,14 @@ Feature: Test de pruebas sobre los menus de la pagina (MY ACCOUNT)
     And El usuario se encuentra logueado
     And El usuario verifica que ingreso correctamente a la web
 
-  @ProyectoFinal
-  @Account
+  @ProyectoFinal @Account @VerificaPoderCambiarPassword
   Scenario: El usuario verifica que puede cambiar su password
     When El usuario clickea el boton My Account del menu
     And El usuario clickea el boton Account Details para ver detalle de su cuenta
     Then El usuario visualiza que puede cambiar su password
 
 
-  @ProyectoFinal
-  @Account
+  @ProyectoFinal @Account @DeslogueoExitoso
   Scenario: El usuario se desloguea de la cuenta
     When El usuario clickea el boton My Account del menu
     And El usuario clickea el boton Logout

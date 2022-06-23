@@ -4,8 +4,7 @@ Feature: Test de pruebas sobre registrarse en la pagina (MY ACCOUNT - REGISTRATI
     Given El usuario se encuentra en la pagina de Automation Practice
     And El usuario clickea el boton My Account del menu
 
-  @ProyectoFinal
-  @Registracion
+  @ProyectoFinal @Registracion @PasswordVacio
   Scenario Outline: El usuario no se registra por proporcionar un password vacio
     When El usuario ingresa un username <username>
     And El usuario ingresa un password <password>
@@ -17,8 +16,7 @@ Feature: Test de pruebas sobre registrarse en la pagina (MY ACCOUNT - REGISTRATI
       | HernanCrowdAr22@test.com |          |
 
 
-  @ProyectoFinal
-  @Registracion
+  @ProyectoFinal @Registracion @UsernameVacio
   Scenario Outline: El usuario no se registra por proporcionar credenciales vacias
     When El usuario ingresa un username <username>
     And El usuario ingresa un password <password>

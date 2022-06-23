@@ -4,8 +4,7 @@ Feature: Test de pruebas sobre el logueo de la pagina (MY ACCOUNT - LOGIN)
     Given El usuario se encuentra en la pagina de Automation Practice
     And El usuario clickea el boton My Account del menu
 
-  @ProyectoFinal
-  @Login
+  @ProyectoFinal @Login @PasswordIncorrecta
   Scenario Outline: El usuario intenta loguearse con el username y password invertido en mayusculas y minisculas
     When El usuario ingresa su username <username>
     And El usuario ingresa su password <password>
@@ -17,8 +16,7 @@ Feature: Test de pruebas sobre el logueo de la pagina (MY ACCOUNT - LOGIN)
       | hERNANcROWDaR22@TEST.COM | 1705962013hERNANAT |
 
 
-  @ProyectoFinal
-  @Login
+  @ProyectoFinal @Login @VerificacionDeslogueo
   Scenario Outline: El usuario se loguea, se desloguea, vuelve a la instancia anterior y verifica si esta logueado
     When El usuario ingresa su username <username>
     And El usuario ingresa su password <password>
